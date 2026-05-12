@@ -1,11 +1,13 @@
 from sqlalchemy import create_engine, Column, String, Integer, Boolean, Float, ForeignKey
-from sqlalchemy.orm import declaretiv_base
+from sqlalchemy.orm import declarative_base
 from sqlalchemy_utils.types import ChoiceType
+
+
 #cria a conexão do banco
 db = create_engine("sqlite:///banco.db")
 
 #cria a base do banco
-Base = declaretiv_base()
+Base = declarative_base()
 
 #cria as classes/ tablas do banco 
 #usuário
@@ -32,9 +34,9 @@ class pedido(Base):
     __tablename__ = "pedidos"
 
     STATUS_PEDIDOS = (
-        (PENENTE, PENDENTE),
-        (CANCELADO, CANCELADO)
-        (FINAIZADO, FINALIZADO)
+    ("PENDENTE", "PENDENTE"),
+        ("CANCELADO", "CANCELADO"),
+        ("FINALIZADO", "FINALIZADO")
     )
 
     id = Column("id", Integer, primary_key=True, autoincrement=True)
