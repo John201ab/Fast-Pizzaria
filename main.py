@@ -17,3 +17,4 @@ app.include_router(autenticador)
 #set -> criar informaçoes
 #put/patch -> editar informações
 #delete -> deletar informações
+# sqlite viwer
