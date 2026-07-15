@@ -1,0 +1,10 @@
+#para rodar o código: uvicorn main:app --reload
+
+# endpoint:
+# /ordem
+
+
+# Get = leitura/pegar
+# Post = enviar/criar
+# put/patch = edição
+# Delete = deletar

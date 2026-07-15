@@ -1,20 +1,10 @@
 from fastapi import FastAPI
- 
+
 app = FastAPI()
 
-from rotas import rotas
-from autenticar import autenticador
+from auth_routes import auth_router
+from order_routes import order_router
 
-app.include_router(rotas)
-app.include_router(autenticador)
+app.add_api_route(auth_router)
+app.add_api_route(order_router)
 
-#para rodar o código: unicorn main:app --reload
-
-#endpoint
-#dominio.com/pedidos/lista
-
-#get ->ler informações
-#set -> criar informaçoes
-#put/patch -> editar informações
-#delete -> deletar informações
-# sqlite viwer
