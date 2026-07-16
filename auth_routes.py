@@ -2,6 +2,6 @@ from fastapi import APIRouter
 
 auth_router = APIRouter(prefix="/auth", tags=["auth"])
 
-@order_router.get("/lista")
-async def pedidos():
-    return {"mensagem":"Rota pedidos"}
+@auth_router.get("/lista")
+async def autenticar():
+    return {"mensagem":"Rota autenticação pedidos acessada!"}
