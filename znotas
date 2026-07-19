@@ -8,3 +8,9 @@
 # Post = enviar/criar
 # put/patch = edição
 # Delete = deletar
+
+#iniciar migração
+#alembic revision --autogenerate -m "mensagem de mudança"
+
+#executar a mudança:
+#alembic upgrade head
